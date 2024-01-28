@@ -2,7 +2,7 @@ import NextAuth from 'next-auth';
 import GitHub from 'next-auth/providers/github';
 import { connectToMongoDB } from './lib/db';
 import User from './modals/userModals';
-export const { handlers, auth } = NextAuth({
+export const { handlers, auth,signIn,signOut } = NextAuth({
   providers: [
     GitHub({
       clientId: process.env.AUTH_GITHUB_ID,
